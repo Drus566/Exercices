@@ -1,5 +1,6 @@
-require 'matrix'
-array = [1, 2, 3, 4, 5]
-vector = Vector[*array]
-p vector + vector    #=> Vector[2, 4, 6, 8, 10]
-p array + array      #=> [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+require 'open-uri'
+
+open('http://ru.wikibooks.org/wiki/Ruby'){ |f|
+    p f.meta
+    p f.read
+}
